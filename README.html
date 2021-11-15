@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Markdown Cheatsheet</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <!--
+  2021.8.25 by xieby1
+  pandoc's html template refers to `pandoc -D html`
+  -->
+  
+  <style>
+  *,
+  div.sourceCode {
+      margin: 0;
+  }
+  
+  ul {
+      padding-inline-start: 1em;
+  }
+  
+  p code,
+  pre {
+      border: 1px solid #e7eaed;
+      background-color: #f8f8f8;
+      border-radius: 3px;
+  }
+  code.sourceCode {
+      white-space: pre-wrap;
+  }
+  
+  section.level2 {
+      margin: .5em 0 .5em 0;
+      border: 1px solid #adb3b9;
+      border-radius: 16px;
+      box-shadow: #0c0d0e33 0 3px 0, #fff 0 0 0 6px inset;
+      padding: .2em;
+  
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+  }
+  section.level3 {
+      max-width: 20em;
+      max-height: 10em;
+      overflow: auto;
+      margin: .2em;
+      border: 1px solid #adb3b9;
+      border-radius: 8px;
+      box-shadow: #0c0d0e33 0 1px 0, #fff 0 0 0 2px inset;
+      padding: .2em;
+      flex-grow: 1;
+  }
+  h2 {
+      width: 100%;
+  }
+  
+  table,
+  th,
+  tr,
+  td {
+      border: 1px solid #999;
+      border-collapse: collapse;
+  }
+  </style>
+</head>
+<body>
+<section id="markdown-cheatsheet" class="level1">
+<h1>Markdown Cheatsheet</h1>
+<p>🤓A Simple, Compact, Static Markdown to Cheatsheet Converter !</p>
+<section id="intro" class="level2">
+<h2>Intro</h2>
+<section id="prerequisite" class="level3">
+<h3>Prerequisite</h3>
+<ul>
+<li>shell</li>
+<li>pandoc</li>
+</ul>
+</section>
+<section id="usage" class="level3">
+<h3>Usage</h3>
+<ul>
+<li><p>Write markdown as usual</p></li>
+<li><p>Generate html file like below:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">cheatsheet.sh</span> <span class="op">&lt;</span>xxx.md<span class="op">&gt;</span></a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="co"># output: xxx.html</span></a></code></pre></div></li>
+</ul>
+</section>
+<section id="special-syntax" class="level3">
+<h3>Special Syntax</h3>
+<table>
+<thead>
+<tr class="header">
+<th>syntax</th>
+<th>meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1st-level header</td>
+<td>none</td>
+</tr>
+<tr class="even">
+<td>2nd-level header</td>
+<td>container</td>
+</tr>
+<tr class="odd">
+<td>3nd-level header</td>
+<td>item</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="feature" class="level3">
+<h3>Feature</h3>
+<ul>
+<li>Simple, Compact, Static</li>
+<li>Adaptive Screen Size</li>
+</ul>
+</section>
+<section id="showcase" class="level3">
+<h3>Showcase</h3>
+<p>TODO: Github Page</p>
+</section>
+<section id="todo" class="level3">
+<h3>TODO</h3>
+<ul>
+<li>Showcase</li>
+<li>Support 3rd party theme</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="next-is-the-test" class="level1">
+<h1>Next is the Test</h1>
+<p>🐱1st-level header will start a new container !</p>
+<section id="各国语言" class="level2">
+<h2>各国语言</h2>
+<section id="你好" class="level3">
+<h3>你好</h3>
+<p>Chinese</p>
+</section>
+<section id="hello" class="level3">
+<h3>Hello</h3>
+<p>English</p>
+</section>
+<section id="こんにちは" class="level3">
+<h3>こんにちは</h3>
+<p>Japanese</p>
+</section>
+<section id="안녕" class="level3">
+<h3>안녕</h3>
+<p>Korean</p>
+</section>
+<section id="привет" class="level3">
+<h3>Привет</h3>
+<p>Russian</p>
+</section>
+<section id="வணக்கம்" class="level3">
+<h3>வணக்கம்</h3>
+<p>Tamil</p>
+</section>
+<section id="ciao" class="level3">
+<h3>Ciao</h3>
+<p>Italian</p>
+</section>
+<section id="नमस्ते" class="level3">
+<h3>नमस्ते</h3>
+<p>Hindi</p>
+</section>
+<section id="salve" class="level3">
+<h3>Salve</h3>
+<p>Latin</p>
+</section>
+<section id="ahoj" class="level3">
+<h3>Ahoj</h3>
+<p>Czech</p>
+</section>
+<section id="hola" class="level3">
+<h3>Hola</h3>
+<p>Spanish</p>
+</section>
+<section id="halo" class="level3">
+<h3>Halo</h3>
+<p>Indonesian</p>
+</section>
+<section id="hei" class="level3">
+<h3>Hei</h3>
+<p>Finnish</p>
+</section>
+<section id="ahoj-1" class="level3">
+<h3>Ahoj</h3>
+<p>Slovak</p>
+</section>
+<section id="selamat-tengahari" class="level3">
+<h3>Selamat tengahari</h3>
+<p>Malaysian</p>
+</section>
+<section id="hallo" class="level3">
+<h3>Hallo</h3>
+<p>Dutch</p>
+</section>
+<section id="مرحبا" class="level3">
+<h3>مرحبا</h3>
+<p>Arabic</p>
+</section>
+<section id="aloha" class="level3">
+<h3>Aloha</h3>
+<p>Hawaiian</p>
+</section>
+<section id="hallo-1" class="level3">
+<h3>Hallo</h3>
+<p>Afrikaans</p>
+</section>
+<section id="bonjour" class="level3">
+<h3>Bonjour</h3>
+<p>French</p>
+</section>
+<section id="hej" class="level3">
+<h3>Hej</h3>
+<p>Swedish</p>
+</section>
+<section id="merhaba" class="level3">
+<h3>Merhaba</h3>
+<p>Turkish</p>
+</section>
+<section id="สวัสดีค่ะ-สวัสดีครับ" class="level3">
+<h3>สวัสดีค่ะ / สวัสดีครับ</h3>
+<p>Thai</p>
+</section>
+</section>
+<section id="inspired-by" class="level2">
+<h2>Inspired by</h2>
+<blockquote>
+<p>idiv-biodiversity’s <a href="https://github.com/idiv-biodiversity/pandoc-cheat-sheet">pandoc-cheat-sheet</a></p>
+</blockquote>
+</section>
+</section>
+</body>
+</html>
