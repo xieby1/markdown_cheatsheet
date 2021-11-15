@@ -2,6 +2,8 @@
 
 🤓A Simple, Compact, Static Markdown to Cheatsheet Converter !
 
+See it on xieby1's [**Markdown Cheatsheet**](https://github.com/xieby1/markdown_cheatsheet) Github repo.
+
 ## Intro
 
 ### Prerequisite
@@ -35,11 +37,13 @@
 
 ### Showcase
 
-TODO: Github Page
+This README.md is converted:
+
+see it on [Github Page](https://xieby1.github.io/markdown_cheatsheet/README.html).
 
 ### TODO
 
-* Showcase
+* ~~Showcase~~
 * Support 3rd party theme
 
 # Next is the Test
