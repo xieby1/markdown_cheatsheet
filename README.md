@@ -1,10 +1,7 @@
-# Markdown Cheatsheet
+# 📃[Markdown Cheatsheet](https://github.com/xieby1/markdown_cheatsheet)
 
-🤓A Simple, Compact, Static Markdown to Cheatsheet Converter !
-
-See the source on xieby1's [**Markdown Cheatsheet**](https://github.com/xieby1/markdown_cheatsheet) Github repo.
-
-See the showcase on [**Github Page**](https://xieby1.github.io/markdown_cheatsheet/README.html).
+🤓A Simple, Compact, Static Markdown to Cheatsheet Converter!
+📃[**Demo**](https://xieby1.github.io/markdown_cheatsheet/README.html).
 
 ## Intro
 
@@ -45,20 +42,20 @@ ln -s <path/to>/cheatsheet.sh /usr/bin/
 * Simple, Compact, Static
 * Adaptive Screen Size
 
-### Showcase
+### Demo
 
 This README.md is converted:
 
-see it on [Github Page](https://xieby1.github.io/markdown_cheatsheet/README.html).
+see it on 📃[Github Page](https://xieby1.github.io/markdown_cheatsheet/README.html).
 
 ### TODO
 
-* ~~Showcase~~
+* ~~Demo~~
 * Support 3rd party theme
 
 # Next is the Test
 
-🐱1st-level header will start a new container !
+🐱1st-level header will start a new container!
 
 ## 各国语言
 
