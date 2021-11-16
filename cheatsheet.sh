@@ -14,6 +14,7 @@ then
     usage
 fi
 
+TEMPLATE="$(dirname $(realpath $0))/pandoc_template.html"
 HEAD="$(dirname $(realpath $0))/pandoc_cheatsheet_head.html"
 MD="$1"
 HTML="${1%.*}.html"
@@ -21,6 +22,7 @@ HTML="${1%.*}.html"
 pandoc \
     --metadata pagetitle="Markdown Cheatsheet" \
     --section-divs \
+    --template="${TEMPLATE}" \
     -H "${HEAD}" \
     -o "${HTML}" \
     "${MD}"
