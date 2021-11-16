@@ -89,8 +89,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       padding-inline-start: 1em;
   }
   
-  p code,
-  div.sourceCode {
+  p > code, /* inline code */
+  section > pre, /* unstyled code block */
+  div.sourceCode /* styled code block */ {
       border: 1px solid #e7eaed;
       background-color: #f8f8f8;
       border-radius: 3px;
