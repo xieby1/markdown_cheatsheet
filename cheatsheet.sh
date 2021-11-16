@@ -14,8 +14,8 @@ then
     usage
 fi
 
-TEMPLATE="$(dirname $(realpath $0))/pandoc_template.html"
-HEAD="$(dirname $(realpath $0))/pandoc_cheatsheet_head.html"
+TEMPLATE="$(dirname $(realpath $0))/template.html"
+HEAD="$(dirname $(realpath $0))/head.html"
 MD="$1"
 HTML="${1%.*}.html"
 
