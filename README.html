@@ -90,7 +90,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   }
   
   p code,
-  pre {
+  div.sourceCode {
       border: 1px solid #e7eaed;
       background-color: #f8f8f8;
       border-radius: 3px;
@@ -138,7 +138,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="markdown-cheatsheet" class="level1">
 <h1>Markdown Cheatsheet</h1>
 <p>🤓A Simple, Compact, Static Markdown to Cheatsheet Converter !</p>
-<p>See it on xieby1’s <a href="https://github.com/xieby1/markdown_cheatsheet"><strong>Markdown Cheatsheet</strong></a> Github repo.</p>
+<p>See the source on xieby1’s <a href="https://github.com/xieby1/markdown_cheatsheet"><strong>Markdown Cheatsheet</strong></a> Github repo.</p>
+<p>See the showcase on <a href="https://xieby1.github.io/markdown_cheatsheet/README.html"><strong>Github Page</strong></a>.</p>
 <section id="intro" class="level2">
 <h2>Intro</h2>
 <section id="prerequisite" class="level3">
@@ -148,13 +149,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>pandoc</li>
 </ul>
 </section>
+<section id="install" class="level3">
+<h3>Install</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">git</span> clone https://github.com/xieby1/markdown_cheatsheet.git</a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="fu">ln</span> -s <span class="op">&lt;</span>path/to<span class="op">&gt;</span>/cheatsheet.sh /usr/bin/</a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="co"># or /usr/local/bin/, or ~/.local/bin/</span></a></code></pre></div>
+</section>
 <section id="usage" class="level3">
 <h3>Usage</h3>
 <ul>
 <li><p>Write markdown as usual</p></li>
 <li><p>Generate html file like below:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="ex">cheatsheet.sh</span> <span class="op">&lt;</span>xxx.md<span class="op">&gt;</span></a>
-<a class="sourceLine" id="cb1-2" title="2"><span class="co"># output: xxx.html</span></a></code></pre></div></li>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">cheatsheet.sh</span> <span class="op">&lt;</span>xxx.md<span class="op">&gt;</span></a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="co"># output: xxx.html</span></a></code></pre></div></li>
 </ul>
 </section>
 <section id="special-syntax" class="level3">
@@ -169,15 +176,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <tbody>
 <tr class="odd">
 <td>1st-level header</td>
-<td>none</td>
+<td>end of a container</td>
 </tr>
 <tr class="even">
 <td>2nd-level header</td>
-<td>container</td>
+<td>start of container</td>
 </tr>
 <tr class="odd">
 <td>3nd-level header</td>
-<td>item</td>
+<td>start of an item</td>
 </tr>
 </tbody>
 </table>

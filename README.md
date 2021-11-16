@@ -2,7 +2,9 @@
 
 🤓A Simple, Compact, Static Markdown to Cheatsheet Converter !
 
-See it on xieby1's [**Markdown Cheatsheet**](https://github.com/xieby1/markdown_cheatsheet) Github repo.
+See the source on xieby1's [**Markdown Cheatsheet**](https://github.com/xieby1/markdown_cheatsheet) Github repo.
+
+See the showcase on [**Github Page**](https://xieby1.github.io/markdown_cheatsheet/README.html).
 
 ## Intro
 
@@ -10,6 +12,14 @@ See it on xieby1's [**Markdown Cheatsheet**](https://github.com/xieby1/markdown_
 
 * shell
 * pandoc
+
+### Install
+
+```bash
+git clone https://github.com/xieby1/markdown_cheatsheet.git
+ln -s <path/to>/cheatsheet.sh /usr/bin/
+# or /usr/local/bin/, or ~/.local/bin/
+```
 
 ### Usage
 
@@ -24,11 +34,11 @@ See it on xieby1's [**Markdown Cheatsheet**](https://github.com/xieby1/markdown_
 
 ### Special Syntax
 
-| syntax           | meaning   |
-| ---------------- | --------- |
-| 1st-level header | none      |
-| 2nd-level header | container |
-| 3nd-level header | item      |
+| syntax           | meaning            |
+| ---------------- | ------------------ |
+| 1st-level header | end of a container |
+| 2nd-level header | start of container |
+| 3nd-level header | start of an item   |
 
 ### Feature
 
