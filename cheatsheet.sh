@@ -3,6 +3,7 @@ CMD="${0##*/}"
 usage() {
     echo "${CMD} [-h] <cheatsheet.md>"
     echo "Convert cheatsheet.md to cheatsheet.html"
+    exit 0
 }
 
 if [[ $# -lt 1 ]]
