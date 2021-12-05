@@ -143,6 +143,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       column-rule: 1px solid #adb3b9;
       /* no padding in first level TOC */
       padding: 0 0 0 0;
+      word-wrap: break-word;
   }
   
   #TOC > ul > li > ul {
@@ -150,7 +151,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       padding: 0 0 0 0;
   }
   
-  #TOC ul {
+  #TOC > ul > li,
+  #TOC > ul > li > ul > li {
       /* no bullet */
       list-style-type: none;
   }
