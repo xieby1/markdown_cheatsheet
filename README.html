@@ -101,6 +101,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       white-space: pre-wrap;
   }
   
+  #TOC,
   section.level2 {
       margin: .5em 0 .5em 0;
       border: 1px solid #adb3b9;
@@ -134,9 +135,71 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       border: 1px solid #999;
       border-collapse: collapse;
   }
+  
+  #TOC > ul {
+      /* multiple column in first level TOC */
+      column-width: 6em;
+      width: 100%;
+      column-rule: 1px solid #adb3b9;
+      /* no padding in first level TOC */
+      padding: 0 0 0 0;
+  }
+  
+  #TOC > ul > li > ul {
+      /* no padding in second level TOC */
+      padding: 0 0 0 0;
+  }
+  
+  #TOC ul {
+      /* no bullet */
+      list-style-type: none;
+  }
   </style>
 </head>
 <body>
+<nav id="TOC">
+<ul>
+<li><a href="#markdown-cheatsheet">📃<span>Markdown Cheatsheet</span></a><ul>
+<li><a href="#intro">Intro</a><ul>
+<li><a href="#prerequisite">Prerequisite</a></li>
+<li><a href="#install">Install</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#special-syntax">Special Syntax</a></li>
+<li><a href="#feature">Feature</a></li>
+<li><a href="#demo">Demo</a></li>
+<li><a href="#todo">TODO</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#next-is-the-test">Next is the Test</a><ul>
+<li><a href="#各国语言">各国语言</a><ul>
+<li><a href="#你好">你好</a></li>
+<li><a href="#hello">Hello</a></li>
+<li><a href="#こんにちは">こんにちは</a></li>
+<li><a href="#안녕">안녕</a></li>
+<li><a href="#привет">Привет</a></li>
+<li><a href="#வணக்கம்">வணக்கம்</a></li>
+<li><a href="#ciao">Ciao</a></li>
+<li><a href="#नमस्ते">नमस्ते</a></li>
+<li><a href="#salve">Salve</a></li>
+<li><a href="#ahoj">Ahoj</a></li>
+<li><a href="#hola">Hola</a></li>
+<li><a href="#halo">Halo</a></li>
+<li><a href="#hei">Hei</a></li>
+<li><a href="#ahoj-1">Ahoj</a></li>
+<li><a href="#selamat-tengahari">Selamat tengahari</a></li>
+<li><a href="#hallo">Hallo</a></li>
+<li><a href="#مرحبا">مرحبا</a></li>
+<li><a href="#aloha">Aloha</a></li>
+<li><a href="#hallo-1">Hallo</a></li>
+<li><a href="#bonjour">Bonjour</a></li>
+<li><a href="#hej">Hej</a></li>
+<li><a href="#merhaba">Merhaba</a></li>
+<li><a href="#สวัสดีค่ะ-สวัสดีครับ">สวัสดีค่ะ / สวัสดีครับ</a></li>
+</ul></li>
+<li><a href="#inspired-by">Inspired by</a></li>
+</ul></li>
+</ul>
+</nav>
 <section id="markdown-cheatsheet" class="level1">
 <h1>📃<a href="https://github.com/xieby1/markdown_cheatsheet">Markdown Cheatsheet</a></h1>
 <p>🤓A Simple, Compact, Static Markdown to Cheatsheet Converter! 📃<a href="https://xieby1.github.io/markdown_cheatsheet/README.html"><strong>Demo</strong></a>.</p>
@@ -204,8 +267,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="todo" class="level3">
 <h3>TODO</h3>
 <ul>
-<li><del>Demo</del></li>
 <li>Support 3rd party theme</li>
+<li>TOC column fit content</li>
 </ul>
 </section>
 </section>

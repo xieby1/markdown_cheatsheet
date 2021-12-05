@@ -21,6 +21,7 @@ code.sourceCode {
     white-space: pre-wrap;
 }
 
+#TOC,
 section.level2 {
     margin: .5em 0 .5em 0;
     border: 1px solid #adb3b9;
@@ -53,5 +54,24 @@ tr,
 td {
     border: 1px solid #999;
     border-collapse: collapse;
+}
+
+#TOC > ul {
+    /* multiple column in first level TOC */
+    column-width: 6em;
+    width: 100%;
+    column-rule: 1px solid #adb3b9;
+    /* no padding in first level TOC */
+    padding: 0 0 0 0;
+}
+
+#TOC > ul > li > ul {
+    /* no padding in second level TOC */
+    padding: 0 0 0 0;
+}
+
+#TOC ul {
+    /* no bullet */
+    list-style-type: none;
 }
 </style>

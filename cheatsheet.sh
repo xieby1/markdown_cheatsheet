@@ -23,6 +23,7 @@ HTML="${1%.*}.html"
 pandoc \
     --metadata pagetitle="Markdown Cheatsheet" \
     --section-divs \
+    --toc \
     --template="${TEMPLATE}" \
     -H "${HEAD}" \
     -o "${HTML}" \

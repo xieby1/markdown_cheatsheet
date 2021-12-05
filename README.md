@@ -50,8 +50,8 @@ see it on 📃[Github Page](https://xieby1.github.io/markdown_cheatsheet/README.
 
 ### TODO
 
-* ~~Demo~~
 * Support 3rd party theme
+* TOC column fit content
 
 # Next is the Test
 
