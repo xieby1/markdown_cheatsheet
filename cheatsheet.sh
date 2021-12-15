@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 CMD="${0##*/}"
 usage() {
     echo "${CMD} [-h] <cheatsheet.md>"
