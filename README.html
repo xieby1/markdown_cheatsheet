@@ -16,26 +16,28 @@
       div.column{display: inline-block; vertical-align: top; width: 50%;}
   </style>
   <style type="text/css">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
+    border: none; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -44,9 +46,9 @@ pre.numberSource a.sourceLine::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {  }
+  {   }
 @media screen {
-a.sourceLine::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -79,17 +81,17 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
   </style>
   <!-- 2021.8.25 by xieby1 created -->
-  
+
   <style>
   *,
   div.sourceCode {
       margin: 0;
   }
-  
+
   ul {
       padding-inline-start: 1em;
   }
-  
+
   p > code, /* inline code */
   section > pre, /* unstyled code block */
   div.sourceCode /* styled code block */ {
@@ -97,10 +99,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       background-color: #f8f8f8;
       border-radius: 3px;
   }
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  div.sourceCode::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  div.sourceCode {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
   code.sourceCode {
       white-space: pre-wrap;
   }
-  
+
   #TOC,
   section.level2 {
       margin: .5em 0 .5em 0;
@@ -108,7 +119,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       border-radius: 16px;
       box-shadow: #0c0d0e33 0 3px 0, #fff 0 0 0 6px inset;
       padding: .2em;
-  
+
       display: flex;
       flex-wrap: wrap;
       align-items: stretch;
@@ -127,7 +138,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   h2 {
       width: 100%;
   }
-  
+
+  h2,
+  h3 {
+    margin: 0 0 0 0;
+  }
+
   table,
   th,
   tr,
@@ -135,7 +151,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       border: 1px solid #999;
       border-collapse: collapse;
   }
-  
+
   #TOC > ul {
       /* multiple column in first level TOC */
       column-width: 6em;
@@ -145,12 +161,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       padding: 0 0 0 0;
       word-wrap: break-word;
   }
-  
+
   #TOC > ul > li > ul {
       /* no padding in second level TOC */
       padding: 0 0 0 0;
   }
-  
+
   #TOC > ul > li,
   #TOC > ul > li > ul > li {
       /* no bullet */
@@ -161,8 +177,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <body>
 <nav id="TOC">
 <ul>
-<li><a href="#markdown-cheatsheet">📃<span>Markdown Cheatsheet</span></a><ul>
-<li><a href="#intro">Intro</a><ul>
+<li><a href="#markdown-cheatsheet">📃<span>Markdown Cheatsheet</span></a>
+<ul>
+<li><a href="#intro">Intro</a>
+<ul>
 <li><a href="#prerequisite">Prerequisite</a></li>
 <li><a href="#install">Install</a></li>
 <li><a href="#usage">Usage</a></li>
@@ -172,16 +190,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="#todo">TODO</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#next-is-the-test">Next is the Test</a><ul>
-<li><a href="#各国语言">各国语言</a><ul>
+<li><a href="#next-is-the-test">Next is the Test</a>
+<ul>
+<li><a href="#各国语言">各国语言</a>
+<ul>
 <li><a href="#你好">你好</a></li>
 <li><a href="#hello">Hello</a></li>
 <li><a href="#こんにちは">こんにちは</a></li>
 <li><a href="#안녕">안녕</a></li>
 <li><a href="#привет">Привет</a></li>
-<li><a href="#வணக்கம்">வணக்கம்</a></li>
+<li><a href="#வணககம">வணக்கம்</a></li>
 <li><a href="#ciao">Ciao</a></li>
-<li><a href="#नमस्ते">नमस्ते</a></li>
+<li><a href="#नमसत">नमस्ते</a></li>
 <li><a href="#salve">Salve</a></li>
 <li><a href="#ahoj">Ahoj</a></li>
 <li><a href="#hola">Hola</a></li>
@@ -196,7 +216,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="#bonjour">Bonjour</a></li>
 <li><a href="#hej">Hej</a></li>
 <li><a href="#merhaba">Merhaba</a></li>
-<li><a href="#สวัสดีค่ะ-สวัสดีครับ">สวัสดีค่ะ / สวัสดีครับ</a></li>
+<li><a href="#สวสดคะ-สวสดครบ">สวัสดีค่ะ / สวัสดีครับ</a></li>
 </ul></li>
 <li><a href="#inspired-by">Inspired by</a></li>
 </ul></li>
@@ -204,7 +224,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </nav>
 <section id="markdown-cheatsheet" class="level1">
 <h1>📃<a href="https://github.com/xieby1/markdown_cheatsheet">Markdown Cheatsheet</a></h1>
-<p>🤓A Simple, Compact, Static Markdown to Cheatsheet Converter! 📃<a href="https://xieby1.github.io/markdown_cheatsheet/README.html"><strong>Demo</strong></a>.</p>
+<p>🤓A Simple, Compact, Static Markdown to Cheatsheet Converter!</p>
+<ul>
+<li><strong>Demo</strong>
+<ul>
+<li><a href="https://xieby1.github.io/markdown_cheatsheet/README.html">This README</a>.</li>
+<li><a href="https://xieby1.github.io/cheatsheet.html">My Linux Daily Command Cheatsheet</a></li>
+</ul></li>
+</ul>
 <section id="intro" class="level2">
 <h2>Intro</h2>
 <section id="prerequisite" class="level3">
@@ -216,17 +243,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="install" class="level3">
 <h3>Install</h3>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1"><span class="fu">git</span> clone https://github.com/xieby1/markdown_cheatsheet.git</a>
-<a class="sourceLine" id="cb1-2" title="2"><span class="fu">ln</span> -s <span class="op">&lt;</span>path/to<span class="op">&gt;</span>/cheatsheet.sh /usr/bin/</a>
-<a class="sourceLine" id="cb1-3" title="3"><span class="co"># or /usr/local/bin/, or ~/.local/bin/</span></a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/xieby1/markdown_cheatsheet.git</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ln</span> <span class="at">-s</span> <span class="op">&lt;</span>path/to<span class="op">&gt;</span>/cheatsheet.sh /usr/bin/</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># or /usr/local/bin/, or ~/.local/bin/</span></span></code></pre></div>
 </section>
 <section id="usage" class="level3">
 <h3>Usage</h3>
 <ul>
 <li><p>Write markdown as usual</p></li>
 <li><p>Generate html file like below:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1"><span class="ex">cheatsheet.sh</span> <span class="op">&lt;</span>xxx.md<span class="op">&gt;</span></a>
-<a class="sourceLine" id="cb2-2" title="2"><span class="co"># output: xxx.html</span></a></code></pre></div></li>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">cheatsheet.sh</span> <span class="op">&lt;</span>xxx.md<span class="op">&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># output: xxx.html</span></span></code></pre></div></li>
 </ul>
 </section>
 <section id="special-syntax" class="level3">
@@ -300,7 +327,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3>Привет</h3>
 <p>Russian</p>
 </section>
-<section id="வணக்கம்" class="level3">
+<section id="வணககம" class="level3">
 <h3>வணக்கம்</h3>
 <p>Tamil</p>
 </section>
@@ -308,7 +335,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3>Ciao</h3>
 <p>Italian</p>
 </section>
-<section id="नमस्ते" class="level3">
+<section id="नमसत" class="level3">
 <h3>नमस्ते</h3>
 <p>Hindi</p>
 </section>
@@ -368,7 +395,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3>Merhaba</h3>
 <p>Turkish</p>
 </section>
-<section id="สวัสดีค่ะ-สวัสดีครับ" class="level3">
+<section id="สวสดคะ-สวสดครบ" class="level3">
 <h3>สวัสดีค่ะ / สวัสดีครับ</h3>
 <p>Thai</p>
 </section>

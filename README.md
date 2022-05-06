@@ -1,7 +1,10 @@
 # 📃[Markdown Cheatsheet](https://github.com/xieby1/markdown_cheatsheet)
 
 🤓A Simple, Compact, Static Markdown to Cheatsheet Converter!
-📃[**Demo**](https://xieby1.github.io/markdown_cheatsheet/README.html).
+
+* **Demo**
+  * [This README](https://xieby1.github.io/markdown_cheatsheet/README.html).
+  * [My Linux Daily Command Cheatsheet](https://xieby1.github.io/cheatsheet.html)
 
 ## Intro
 
