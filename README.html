@@ -112,7 +112,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       white-space: pre-wrap;
   }
 
-  #TOC,
+  #TOC > ul > li,
   section.level2 {
       margin: .5em 0 .5em 0;
       border: 1px solid #adb3b9;
@@ -152,7 +152,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       border-collapse: collapse;
   }
 
-  #TOC > ul {
+  #TOC > ul > li > ul {
       /* multiple column in first level TOC */
       column-width: 6em;
       width: 100%;
@@ -171,6 +171,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   #TOC > ul > li > ul > li {
       /* no bullet */
       list-style-type: none;
+  }
+
+  #TOC > ul > li > a {
+      font-weight: bold;
+      zoom: 120%;
   }
   </style>
 </head>

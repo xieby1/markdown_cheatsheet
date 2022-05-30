@@ -30,7 +30,7 @@ code.sourceCode {
     white-space: pre-wrap;
 }
 
-#TOC,
+#TOC > ul > li,
 section.level2 {
     margin: .5em 0 .5em 0;
     border: 1px solid #adb3b9;
@@ -70,7 +70,7 @@ td {
     border-collapse: collapse;
 }
 
-#TOC > ul {
+#TOC > ul > li > ul {
     /* multiple column in first level TOC */
     column-width: 6em;
     width: 100%;
@@ -89,5 +89,10 @@ td {
 #TOC > ul > li > ul > li {
     /* no bullet */
     list-style-type: none;
+}
+
+#TOC > ul > li > a {
+    font-weight: bold;
+    zoom: 120%;
 }
 </style>
