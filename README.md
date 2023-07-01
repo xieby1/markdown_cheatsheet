@@ -4,7 +4,7 @@
 
 * **Demo**
   * [This README](https://xieby1.github.io/markdown_cheatsheet/README.html).
-  * [My Linux Daily Command Cheatsheet](https://xieby1.github.io/cheatsheet.html)
+  * [My Linux Daily Command Cheatsheet](https://xieby1.github.io/cheatsheet/)
 
 ## Intro
 

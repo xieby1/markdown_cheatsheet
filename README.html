@@ -54,7 +54,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -67,7 +67,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -125,8 +125,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       align-items: stretch;
   }
   section.level3 {
-      max-width: 20em;
-      max-height: 10em;
+      max-width: fit-content;
+      max-height: fit-content;
       overflow: auto;
       margin: .2em;
       border: 1px solid #adb3b9;
@@ -187,7 +187,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <body>
 <nav id="TOC">
 <ul>
-<li><a href="#markdown-cheatsheet">📃<span>Markdown Cheatsheet</span></a>
+<li><a href="#markdown-cheatsheet">📃<span>Markdown
+Cheatsheet</span></a>
 <ul>
 <li><a href="#intro">Intro</a>
 <ul>
@@ -233,13 +234,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 </nav>
 <section id="markdown-cheatsheet" class="level1">
-<h1>📃<a href="https://github.com/xieby1/markdown_cheatsheet">Markdown Cheatsheet</a></h1>
+<h1>📃<a href="https://github.com/xieby1/markdown_cheatsheet">Markdown
+Cheatsheet</a></h1>
 <p>🤓A Simple, Compact, Static Markdown to Cheatsheet Converter!</p>
 <ul>
 <li><strong>Demo</strong>
 <ul>
-<li><a href="https://xieby1.github.io/markdown_cheatsheet/README.html">This README</a>.</li>
-<li><a href="https://xieby1.github.io/cheatsheet.html">My Linux Daily Command Cheatsheet</a></li>
+<li><a
+href="https://xieby1.github.io/markdown_cheatsheet/README.html">This
+README</a>.</li>
+<li><a href="https://xieby1.github.io/cheatsheet/">My Linux Daily
+Command Cheatsheet</a></li>
 </ul></li>
 </ul>
 <section id="intro" class="level2">
@@ -253,7 +258,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="install" class="level3">
 <h3>Install</h3>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/xieby1/markdown_cheatsheet.git</span>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/xieby1/markdown_cheatsheet.git</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ln</span> <span class="at">-s</span> <span class="op">&lt;</span>path/to<span class="op">&gt;</span>/cheatsheet.sh /usr/bin/</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># or /usr/local/bin/, or ~/.local/bin/</span></span></code></pre></div>
 </section>
@@ -262,7 +268,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li><p>Write markdown as usual</p></li>
 <li><p>Generate html file like below:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">cheatsheet.sh</span> <span class="op">&lt;</span>xxx.md<span class="op">&gt;</span></span>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">cheatsheet.sh</span> <span class="op">&lt;</span>xxx.md<span class="op">&gt;</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># output: xxx.html</span></span></code></pre></div></li>
 </ul>
 </section>
@@ -301,7 +308,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="demo" class="level3">
 <h3>Demo</h3>
 <p>This README.md is converted:</p>
-<p>see it on 📃<a href="https://xieby1.github.io/markdown_cheatsheet/README.html">Github Page</a>.</p>
+<p>see it on 📃<a
+href="https://xieby1.github.io/markdown_cheatsheet/README.html">Github
+Page</a>.</p>
 </section>
 <section id="todo" class="level3">
 <h3>TODO</h3>
@@ -413,7 +422,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="inspired-by" class="level2">
 <h2>Inspired by</h2>
 <blockquote>
-<p>idiv-biodiversity’s <a href="https://github.com/idiv-biodiversity/pandoc-cheat-sheet">pandoc-cheat-sheet</a></p>
+<p>idiv-biodiversity’s <a
+href="https://github.com/idiv-biodiversity/pandoc-cheat-sheet">pandoc-cheat-sheet</a></p>
 </blockquote>
 </section>
 </section>
